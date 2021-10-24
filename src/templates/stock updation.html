@@ -1,0 +1,36 @@
+{% extends 'dealer_index.html' %}
+{% block body %}
+
+
+<body>
+<form id="form1" name="form1" method="post" action="stock_updation1"><table class="table">
+  <tr>
+    <td>Product </td>
+    <td><select name="select" class="form-control" required>
+      {% for i in val %}
+      <option value="{{i[0]}}">{{i[1]}}</option>
+      {% endfor %}
+    </select></td>
+  </tr>
+  <!--<tr>-->
+    <!--<td>Type</td>-->
+    <!--<td><label>-->
+      <!--<input type="text" name="textfield2" />-->
+    <!--</label></td>-->
+  <!--</tr>-->
+  <tr>
+    <td>Quantity</td>
+    <td><label>
+      <input type="text" name="textfield3" required class="form-control" />
+    </label></td>
+  </tr>
+  <tr>
+    <td>
+      <input type="submit" value="Submit" class="btn-block"/>
+    </td>
+  </tr>
+</table>
+
+</form>
+</body>
+{% endblock %}

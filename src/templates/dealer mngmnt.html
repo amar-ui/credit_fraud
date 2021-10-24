@@ -1,0 +1,38 @@
+{% extends 'admin_index.html' %}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table class="table">
+    <tr>
+      <td>FirstNname </td>
+      <td>LastNname </td>
+      <td>DOB </td>
+      <td>Gender</td>
+      <td>Place</td>
+      <td>Post</td>
+      <td>Pin</td>
+      <td>Email</td>
+      <td>Phone</td>
+      <td>&nbsp;</td>
+    </tr>
+    {% for i in val%}
+    <tr>
+      <td> {{i[2]}}</td>
+      <td>&nbsp;{{i[3]}}</td>
+      <td>&nbsp;{{i[4]}}</td>
+      <td>&nbsp;{{i[5]}}</td>
+      <td>&nbsp;{{i[6]}}</td>
+      <td>&nbsp;{{i[7]}}</td>
+      <td>&nbsp;{{i[8]}}</td>
+      <td>{{i[9]}}</td>
+      <td>{{i[10]}}</td>
+      <td><a href="{{url_for('dealer_edit',id=i[1])}}#why-us">Edit</a>
+       <a href="{{url_for('dealer_delete',id=i[1])}}">Delete</a></td>
+    </tr>
+    {% endfor %}
+
+  </table>
+</form>
+</body>
+{% endblock %}

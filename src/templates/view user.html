@@ -1,0 +1,39 @@
+{% extends 'admin_index.html' %}
+{% block body %}
+
+
+<body>
+<form action="" method="post">
+<table class="table">
+  <tr>
+    <td>FirstName </td>
+    <td>LastName </td>
+    <td>DOB </td>
+    <td>Gender</td>
+    <td>Email</td>
+    <td>HouseName </td>
+    <td>Place</td>
+    <td>Post</td>
+    <td>Pin</td>
+    <td>Phone</td>
+    <td> </td>
+    </tr>
+  {% for i in val%}
+  <tr>
+    <td>{{i[2]}}</td>
+    <td>{{i[3]}}</td>
+    <td>&nbsp;{{i[4]}}</td>
+    <td>&nbsp;{{i[5]}}</td>
+    <td>&nbsp;{{i[10]}}</td>
+    <td>{{i[6]}}</td>
+    <td>&nbsp;{{i[7]}}</td>
+    <td>{{i[8]}}</td>
+    <td>&nbsp;{{i[9]}}</td>
+    <td>{{i[11]}}</td>
+    <td><a href="{{url_for('generate_pin',id=i[1])}}#why-us">Generate PIN</a> </td>
+    </tr>
+  {% endfor %}
+</table>
+</form>
+</body>
+{% endblock %}

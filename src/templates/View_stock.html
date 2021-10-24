@@ -1,0 +1,30 @@
+{% extends 'dealer_index.html' %}
+{% block body %}
+
+
+<body>
+<form action="" method="post">
+<table class="table">
+  <tr>
+    <td>Product Name </td>
+
+    <td>Price(per item)</td>
+    <td>Quantity</td>
+
+
+
+    </tr>
+  {% for i in val%}
+  <tr>
+    <td>{{i[1]}}</td>
+
+    <td>&nbsp;{{i[2]}}</td>
+    <td>&nbsp;{{i[5]}}</td>
+
+
+    </tr>
+  {% endfor %}
+</table>
+</form>
+</body>
+{% endblock %}

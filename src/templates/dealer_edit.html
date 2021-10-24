@@ -1,0 +1,74 @@
+{% extends 'admin_index.html' %}
+{% block body %}
+
+
+<body>
+<form name="form1" method="post" action="dealer_update">
+  <table class="table">
+    <tr>
+      <td>First Name</td>
+      <td><label>
+        <input type="text" name="textfield" value="{{val[2]}}" class="form-control" required pattern="[a-z A-Z]{2,20}">
+      </label></td>
+    </tr>
+    <tr>
+      <td>Last Name</td>
+      <td><label>
+        <input type="text" name="textfield2" value="{{val[3]}}" class="form-control" required pattern="[a-z A-Z]{1,20}">
+      </label></td>
+    </tr>
+    <tr>
+      <td>DOB</td>
+      <td><label>
+        <input type="date" name="textfield3" value="{{val[4]}}" required>
+      </label></td>
+    </tr>
+    <tr>
+      <td>Gender</td>
+      <td><label>
+        <input name="radiobutton" type="radio" value="Male" {% if val[5]=="Male" %}checked {% endif %}>
+        Male
+        <input name="radiobutton" type="radio" value="Female" {% if val[5]=="Female" %}checked {% endif %}>
+      Female</label></td>
+    </tr>
+    <tr>
+      <td>Place</td>
+      <td><label>
+        <input type="text" name="textfield4" value="{{val[6]}}" class="form-control" required pattern="[a-z A-Z]{2,20}">
+      </label></td>
+    </tr>
+    <tr>
+      <td>Post</td>
+      <td><label>
+        <input type="text" name="textfield5" value="{{val[7]}}" class="form-control" required pattern="[a-z A-Z]{2,20}">
+      </label></td>
+    </tr>
+    <tr>
+      <td>PIN</td>
+      <td><label>
+        <input type="text" name="textfield6" value="{{val[8]}}" class="form-control" required pattern="[0-9]{6}">
+      </label></td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td><label>
+        <input type="text" name="textfield7" value="{{val[9]}}" class="form-control" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+      </label></td>
+    </tr>
+    <tr>
+      <td>Phone</td>
+      <td><label>
+        <input type="text" name="textfield8" value="{{val[10]}}" class="form-control" required pattern="[6789][0-9]{9}">
+      </label></td>
+    </tr>
+     <tr>
+      <td colspan="2"><label>
+        <div align="center">
+          <input type="submit" name="Submit" value="Update" class="btn-block">
+          </div>
+      </label></td>
+    </tr>
+  </table>
+</form>
+</body>
+{% endblock %}

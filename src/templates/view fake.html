@@ -1,0 +1,26 @@
+{% extends 'admin_index.html' %}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action=""><table class="table">
+  <tr>
+    <td>UserName </td>
+    <td>Date</td>
+    <td>Time</td>
+        <td>Amount</td>
+
+  </tr>
+  {% for i in val%}
+  <tr>
+    <td>&nbsp;{{i[9]}}{{i[10]}}</td>
+    <td>&nbsp;{{i[4]}}</td>
+    <td>{{i[5]}}</td>
+        <td>{{i[8]}}</td>
+
+  </tr>
+  {% endfor %}
+</table>
+
+</form>
+</body>
+{% endblock %}

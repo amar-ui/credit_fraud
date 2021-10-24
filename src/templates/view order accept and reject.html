@@ -1,0 +1,30 @@
+{% extends 'dealer_index.html' %}
+{% block body %}
+
+
+<body>
+<form id="form1" name="form1" method="post" action=""><table class="table">
+  <tr>
+    <td>User name </td>
+    <td>Address</td>
+    <td>Product name </td>
+    <td>Price</td>
+    <td>Quantity</td>
+    <td>Date</td>
+    <td>&nbsp;</td>
+  </tr>{% for i in val %}
+  <tr>
+    <td>{{i[2]}} {{i[3]}}</td>
+    <td>{{i[6]}}, {{i[7]}} {{i[8]}} {{i[9]}}, {{i[11]}}</td>
+    <td>{{i[12]}}</td>
+    <td>{{i[14]}}</td>
+    <td>{{i[13]}}</td>
+    <td>{{i[15]}}</td>
+    <td><a href="{{url_for('accept',id=i[16])}}">Accept </a>
+    <a href="{{url_for('reject',id=i[16])}}">Reject</a></td>
+  </tr>{% endfor %}
+</table>
+
+</form>
+</body>
+{% endblock %}

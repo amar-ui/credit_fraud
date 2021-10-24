@@ -1,0 +1,36 @@
+{% extends 'dealer_index.html' %}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="product_edit1" ><table class="table">
+  <tr>
+    <td>Product name </td>
+    <td><label>
+      <input type="text" name="textfield" value="{{val[1]}}"/>
+    </label></td>
+  </tr>
+  <tr>
+    <td>Price</td>
+    <td><label>
+      <input type="text" name="textfield2" value="{{val[2]}}" />
+    </label></td>
+  </tr>
+  <tr>
+    <td>Details</td>
+    <td><label>
+      <input type="text" name="textfield3" value="{{val[3]}}" />
+    </label></td>
+  </tr>
+
+  <tr>
+    <td colspan="2"><label>
+      <div align="center">
+        <input type="submit" name="submit" value="Add" />
+        </div>
+    </label></td>
+    </tr>
+</table>
+
+</form>
+</body>
+{% endblock %}

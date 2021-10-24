@@ -1,0 +1,33 @@
+{% extends 'dealer_index.html' %}
+{% block body %}
+
+
+<body>
+<form action="" method="post">
+<table class="table">
+  <tr>
+    <td>Product Name </td>
+    <td>Details </td>
+    <td>Price(per item)</td>
+    <td>Quantity</td>
+    <td>Image</td>
+    <td></td>
+
+    </tr>
+  {% for i in val%}
+  <tr>
+    <td>{{i[1]}}</td>
+    <td>{{i[3]}}</td>
+    <td>&nbsp;{{i[2]}}</td>
+    <td>&nbsp;{{i[5]}}</td>
+    <td><img src="/static/product/{{i[4]}}" width="50px" /></td>
+    <td>&nbsp;<a href="{{url_for('product_edit',id=i[0])}}#why-us">Edit</a>
+    &nbsp;<a href="{{url_for('change_image',id=i[0])}}#why-us">Edit Image</a>
+    <a href="{{url_for('product_delete',id=i[0])}}">Delete</a> </td>
+
+    </tr>
+  {% endfor %}
+</table>
+</form>
+</body>
+{% endblock %}

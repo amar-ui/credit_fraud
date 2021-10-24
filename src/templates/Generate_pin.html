@@ -1,0 +1,39 @@
+{% extends 'admin_index.html' %}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="generate_pin1"><table class="table">
+<tr>
+    <td>Card Number</td>
+    <td><label>
+      <input type="text" name="cardno" required pattern="[0-9]{1,16}" class="form-control"/>
+    </label></td>
+  </tr>
+  <tr>
+    <td>Expiry Date</td>
+    <td><label>
+      <input type="date" name="date2" required class="form-control"/>
+    </label></td>
+  </tr>
+  <tr>
+    <td>Amount Balance</td>
+    <td><label>
+      <input type="text" name="bal" required class="form-control"/>
+    </label></td>
+  </tr>
+  <tr>
+    <td>IFSC</td>
+    <td><label>
+      <input type="text" name="ifsc" required class="form-control"/>
+    </label></td>
+  </tr>
+  <tr>
+    <td>
+      <input type="submit" value="Submit" class="btn-block"/>
+    </td>
+  </tr>
+</table>
+
+</form>
+</body>
+{% endblock %}
